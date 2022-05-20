@@ -1,0 +1,53 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": ".NET Core Launch STS(web)",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "build_sts",
+			"program": "${workspaceFolder}/src/Skoruba.Duende.IdentityServer.STS.Identity/bin/Debug/net6.0/Skoruba.Duende.IdentityServer.STS.Identity.dll",
+			"args": [],
+			"cwd": "${workspaceFolder}/src/Skoruba.Duende.IdentityServer.STS.Identity",
+			"stopAtEntry": false,
+			"serverReadyAction": {
+				"action": "openExternally",
+				"pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+			},
+			"env": {
+				"ASPNETCORE_ENVIRONMENT": "Development"
+			},
+			"sourceFileMap": {
+				"/Views": "${workspaceFolder}/Views"
+			}
+		},
+		{
+			"name": ".NET Core Launch Admin(web)",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "build_admin",
+			"program": "${workspaceFolder}/src/Skoruba.Duende.IdentityServer.Admin/bin/Debug/net6.0/Skoruba.Duende.IdentityServer.Admin.dll",
+			"args": [],
+			"cwd": "${workspaceFolder}/src/Skoruba.Duende.IdentityServer.Admin",
+			"stopAtEntry": false,
+			"serverReadyAction": {
+				"action": "openExternally",
+				"pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+			},
+			"env": {
+				"ASPNETCORE_ENVIRONMENT": "Development"
+			},
+			"sourceFileMap": {
+				"/Views": "${workspaceFolder}/Views"
+			}
+		},
+		{
+			"name": ".NET Core Attach",
+			"type": "coreclr",
+			"request": "attach"
+		}
+	]
+}
